@@ -6,7 +6,7 @@
 # 5. add console to bottom of rakafile 
 task :environment do
   require_relative './config/environment'
-
+end
 namespace :greeting do
   desc 'outputs hello to the terminal'
   task :hello do
@@ -21,8 +21,6 @@ end
 
 namespace :db do 
   desc 'migrate changes to your database'
-
-  end
   task :migrate => :environment do
     Student.create_table
   end
